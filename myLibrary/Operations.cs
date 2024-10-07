@@ -22,5 +22,23 @@ namespace myLibrary
         {
             return number + number2;
         }
+
+        public IList<int> GetEvenNumbers(int start, int end)
+        {
+           // List<int> evenNumbers = new List<int>();
+           // for (int i = start; i < end; i++)
+           // {
+           //     if(i % 2 == 0)
+           //   {
+           //       evenNumbers.Add(i);
+           //   }
+           // }
+           //return evenNumbers;
+           List<int> evenNumbers  = Enumerable.Range(start,end)
+                .Where(isEven)
+                .ToList();
+            return evenNumbers;
+        }
+        //metodos de prueba de nunit para arrays
     } 
 }
