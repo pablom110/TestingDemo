@@ -51,5 +51,18 @@ namespace myLibrary
 
             }
         }
+
+        public void GetEvenNumbers_ImputRange_ReturnEvenNumbers() 
+        {
+            Operations operations=new Operations();
+            int start = 0;
+            int end = 10;
+
+            var result = operations.GetEvenNumbers(start, end);
+
+            Assert.That(result, Is.Not.Empty);
+            Assert.That(result, Does.Contain(2));
+
+        }
     }
 }
